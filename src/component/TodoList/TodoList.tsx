@@ -21,7 +21,7 @@ export const TodoLis = () => {
   };
 
   return (
-    <Card title="Список завдань">
+    <Card title="Список усіх завдань">
       <List
         locale={{
           emptyText: "Завдань немає :(",
