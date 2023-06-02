@@ -24,7 +24,7 @@ export const AddTodoForm: React.FC<any> = () => {
 
   const handleFormSubmit = (todo: any): void => {
     dispatch(addTodo(todo));
-    message.success("Todo added!");
+    message.success("Завдання додано!");
   };
 
   const onFinish = () => {
@@ -42,14 +42,14 @@ export const AddTodoForm: React.FC<any> = () => {
 
   const [open, setOpen] = useState(false);
   const [confirmLoading, setConfirmLoading] = useState(false);
-  const [modalText, setModalText] = useState("Content of the modal");
+  const [modalText, setModalText] = useState("Зміст модального слова");
 
   const showModal = () => {
     setOpen(true);
   };
 
   const handleOk = () => {
-    setModalText("The modal will be closed after two seconds");
+    // setModalText("The modal will be closed after two seconds");
     setConfirmLoading(true);
     setTimeout(() => {
       setOpen(false);
@@ -58,7 +58,7 @@ export const AddTodoForm: React.FC<any> = () => {
   };
 
   const handleCancel = () => {
-    console.log("Clicked cancel button");
+    console.log("Натиснув кнопку скасування");
     setOpen(false);
   };
 
@@ -74,7 +74,7 @@ export const AddTodoForm: React.FC<any> = () => {
       <Row gutter={20}>
         <Col xs={24} sm={24} md={24} lg={24} xl={24}>
           <Modal
-            title="Title"
+            // title="Title"
             open={open}
             onOk={handleOk}
             confirmLoading={confirmLoading}
@@ -87,7 +87,7 @@ export const AddTodoForm: React.FC<any> = () => {
           <Form.Item
             label={"Заголовок"}
             name={"name"}
-            rules={[{ required: true, message: "This field is required" }]}
+            rules={[{ required: true, message: "Це поле обов'язкове для заповнення" }]}
           >
             <Input />
           </Form.Item>
@@ -97,7 +97,7 @@ export const AddTodoForm: React.FC<any> = () => {
           <Form.Item
             label={"Текст"}
             name={"text"}
-            rules={[{ required: true, message: "This field is required" }]}
+            rules={[{ required: true, message: "Це поле обов'язкове для заповнення" }]}
           >
             <TextArea />
           </Form.Item>
@@ -107,9 +107,9 @@ export const AddTodoForm: React.FC<any> = () => {
           <Form.Item
             label={"День"}
             name={"data"}
-            rules={[{ required: true, message: "This field is required" }]}
+            rules={[{ required: true, message: "Це поле обов'язкове для заповнення" }]}
           >
-            <DatePicker placeholder="Created Date" />
+            <DatePicker placeholder="Ведіть дату" />
           </Form.Item>
         </Col>
 
@@ -117,7 +117,7 @@ export const AddTodoForm: React.FC<any> = () => {
           <Form.Item
             label={"Час"}
             name={"time"}
-            rules={[{ required: true, message: "This field is required" }]}
+            rules={[{ required: true, message: "Це поле обов'язкове для заповнення" }]}
           >
             <TimePicker />
           </Form.Item>

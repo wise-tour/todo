@@ -17,14 +17,14 @@ export const TodoLis = () => {
   };
 
   const handleToggleTodoStatus = (): void => {
-    message.info("Todo state updated!");
+    message.info("Завдання оновлено");
   };
 
   return (
-    <Card title="Todo List">
+    <Card title="Список завдань">
       <List
         locale={{
-          emptyText: "There's nothing to do :(",
+          emptyText: "Завдань немає :(",
         }}
         dataSource={todos}
         renderItem={(todo) => (
